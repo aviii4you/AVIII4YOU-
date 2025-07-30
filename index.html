@@ -4,80 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>aviii4you WebApp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #2c3e50, #3498db);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #3498db);
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
+      overflow: hidden;
     }
 
     img.profile {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid white;
+      border: 4px solid #fff;
       margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      animation: glow 3s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 20px #fff, 0 0 30px #3498db;
+      }
+      50% {
+        box-shadow: 0 0 30px #fff, 0 0 40px #2c3e50;
+      }
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
+      font-weight: 600;
+      text-shadow: 2px 2px 8px #00000066;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       max-width: 600px;
+      margin: 0 20px;
+      color: #e0e0e0;
     }
 
     .button {
-      margin-top: 20px;
-      padding: 12px 24px;
+      margin-top: 25px;
+      padding: 12px 28px;
       font-size: 1rem;
-      background-color: #ffffff;
+      background: #fff;
       color: #2c3e50;
       border: none;
-      border-radius: 8px;
+      border-radius: 30px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .button:hover {
-      background-color: #ecf0f1;
+      background: #f1f1f1;
+      transform: scale(1.05);
     }
 
     .contact {
-      margin-top: 30px;
+      margin-top: 35px;
       font-size: 1rem;
-      line-height: 1.8;
+      line-height: 2;
     }
 
     a {
       color: #fff;
       text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffeb3b;
     }
   </style>
 </head>
 <body>
   <img src="profile.jpg" alt="aviii4you Profile" class="profile" />
 
-  <h1>Welcome to aviii4you's WebApp</h1>
-  <p>This is a simple website created and hosted using GitHub Pages. Stay tuned for more updates!</p>
-  <button class="button" onclick="alert('Thanks for visiting!')">Click Me</button>
-  
+  <h1>Hello, I'm aviii4you</h1>
+  <p>Welcome to my personal web app! Follow me on social media or get in touch via email. More cool content coming soon!</p>
+
+  <button class="button" onclick="alert('Thanks for visiting!')">Say Hi 👋</button>
+
   <div class="contact">
-    📧 Email: <a href="mailto:Panchalavi456@gmail.com">Panchalavi456@gmail.com</a><br/>
     📸 Instagram: <a href="https://instagram.com/aviii4you" target="_blank">@aviii4you</a><br/>
     ▶️ YouTube: <a href="https://youtube.com/@aviii4you?si=oFXNlPTlPZUDkbA5" target="_blank">@aviii4you</a>
+    📧 Email: <a href="mailto:Panchalavi456@gmail.com">Panchalavi456@gmail.com</a><br/>
   </div>
 </body>
 </html>
