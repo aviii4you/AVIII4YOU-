@@ -7,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
 
   <style>
-    /* Existing styling (same as before, shortened for clarity)... */
     body {
       margin: 0;
       padding: 0;
@@ -16,6 +15,67 @@
       color: white;
       text-align: center;
       transition: background 1s ease;
+      overflow-x: hidden;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      font-size: 0.95rem;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 6px 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .music-controls {
+      margin-top: 25px;
+    }
+
+    .music-btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #fff;
+      color: #2c3e50;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
     }
 
     .rain, .lightning {
@@ -23,8 +83,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       z-index: 0;
     }
 
@@ -49,26 +109,19 @@
       13% { opacity: 0; }
     }
 
-    .music-controls {
-      margin-top: 20px;
-      z-index: 2;
-      position: relative;
-    }
+    @media (max-width: 480px) {
+      .profile {
+        width: 100px;
+        height: 100px;
+      }
 
-    .music-btn {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #fff;
-      color: #2c3e50;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-    }
+      h1 {
+        font-size: 1.6rem;
+      }
 
-    .content {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
+      p {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -78,9 +131,8 @@
   <div class="rain" id="rain-effect"></div>
   <div class="lightning" id="lightning-effect"></div>
 
-  <!-- Main Content -->
   <div class="content">
-    <img src="profile.jpg" class="profile" alt="Profile">
+    <img src="profile.jpg" class="profile" alt="Profile" />
     <h1>Hello, I'm AVIII4YOU</h1>
     <p>Welcome to my page! Stay connected 👇</p>
 
@@ -107,18 +159,25 @@
       </a>
     </div>
 
-    <!-- 🎵 Music Controls -->
+    <!-- Music Player -->
     <div class="music-controls">
       <audio id="bg-music" loop>
         <source src="https://dl.sndup.net/8pjb/Saiyaara%20-%20Ek%20Tha%20Tiger.mp3" type="audio/mp3" />
       </audio>
+
+      <!-- Thunder Sound -->
+      <audio id="thunder-sound" loop>
+        <source src="https://dl.sndup.net/dpx4/thunder.mp3" type="audio/mp3" />
+      </audio>
+
       <button class="music-btn" onclick="toggleMusic()">🎵 Play / Pause Music</button>
     </div>
   </div>
 
-  <!-- Script to toggle animation -->
+  <!-- Script -->
   <script>
     const music = document.getElementById('bg-music');
+    const thunder = document.getElementById('thunder-sound');
     const rain = document.getElementById('rain-effect');
     const lightning = document.getElementById('lightning-effect');
     let isPlaying = false;
@@ -126,11 +185,13 @@
     function toggleMusic() {
       if (isPlaying) {
         music.pause();
+        thunder.pause();
         rain.style.display = "none";
         lightning.style.display = "none";
         document.body.style.background = "linear-gradient(135deg, #2c3e50, #3498db)";
       } else {
         music.play();
+        thunder.play();
         rain.style.display = "block";
         lightning.style.display = "block";
         document.body.style.background = "#1c1c1c";
