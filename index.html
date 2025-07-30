@@ -2,85 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Explore - AVIII4YOU</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aviii4you WebApp</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #ece9e6, #ffffff);
-      color: #333;
-      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 30px;
-    }
-
-    .card {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 100%;
+      height: 100vh;
       text-align: center;
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 10px;
-      color: #222;
     }
 
     p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 30px;
+      font-size: 1.2rem;
+      max-width: 600px;
     }
 
-    a.button {
-      display: inline-block;
-      padding: 12px 30px;
-      background-color: #333;
-      color: #fff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    a.button:hover {
-      background-color: #555;
-    }
-
-    .footer {
+    .button {
       margin-top: 20px;
-      font-size: 0.9rem;
-      color: #888;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #ffffff;
+      color: #2c3e50;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ecf0f1;
+    }
+
+    .contact {
+      margin-top: 30px;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Welcome to Explore</h1>
-    <p>Thanks for verifying! This is the second page of your web app. You can add more features, images, links, or whatever you like here.</p>
-    <a href="index.html" class="button">← Back to Home</a>
-    <div class="footer">
-      &copy; 2025 AVIII4YOU. All rights reserved.
-    </div>
+  <h1>Welcome to aviii4you's WebApp</h1>
+  <p>This is a simple website created and hosted using GitHub Pages. Stay tuned for more updates!</p>
+  <button class="button" onclick="alert('Thanks for visiting!')">Click Me</button>
+  
+  <div class="contact">
+    📧 Email: <a href="mailto:Panchalavi456@gmail.com">Panchalavi456@gmail.com</a><br/>
+    📸 Instagram: <a href="https://instagram.com/aviii4you" target="_blank">@aviii4you</a>
   </div>
 </body>
 </html>
