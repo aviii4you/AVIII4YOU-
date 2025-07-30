@@ -11,19 +11,15 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: #1c1c1c;
+      background: linear-gradient(to right, #1e3c72, #2a5298); /* Modern blue gradient */
       color: white;
       text-align: center;
-      transition: background 1s ease;
-      overflow-x: hidden;
     }
 
     .content {
       max-width: 600px;
       margin: auto;
-      padding: 20px;
-      position: relative;
-      z-index: 2;
+      padding: 30px 20px;
     }
 
     .profile {
@@ -33,7 +29,7 @@
       object-fit: cover;
       border: 3px solid #fff;
       margin-bottom: 15px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     }
 
     h1 {
@@ -43,7 +39,7 @@
 
     p {
       font-size: 1rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .contact {
@@ -53,44 +49,16 @@
     .social-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin: 6px 0;
+      gap: 10px;
+      margin: 8px 0;
       color: white;
       text-decoration: none;
     }
 
     .social-icon {
-      width: 20px;
-      height: 20px;
-    }
-
-    .rain, .lightning {
-      pointer-events: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 0;
-    }
-
-    .rain {
-      background-image: url('https://i.ibb.co/jVncrG4/rain-effect.gif');
-      background-size: cover;
-      opacity: 0.3;
-    }
-
-    .lightning {
-      background: rgba(255, 255, 255, 0.9);
-      animation: flash 3s infinite;
-    }
-
-    @keyframes flash {
-      0%, 100% { opacity: 0; }
-      10% { opacity: 0.6; }
-      11% { opacity: 0; }
-      12% { opacity: 0.4; }
-      13% { opacity: 0; }
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
     }
 
     @media (max-width: 480px) {
@@ -110,9 +78,6 @@
   </style>
 </head>
 <body>
-  <!-- Rain & Lightning Layers -->
-  <div class="rain"></div>
-  <div class="lightning"></div>
 
   <div class="content">
     <img src="profile.jpg" class="profile" alt="Profile" />
@@ -125,16 +90,19 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="social-icon" alt="Instagram" />
         @aviii4you
       </a><br/>
+
       <!-- YouTube -->
       <a class="social-link" href="https://youtube.com/@aviii4you" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="social-icon" alt="YouTube" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017_square.svg" class="social-icon" alt="YouTube" />
         @aviii4you
       </a><br/>
+
       <!-- LinkedIn -->
       <a class="social-link" href="https://www.linkedin.com/in/avi-panchal-104760289" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" class="social-icon" alt="LinkedIn" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon_square.svg" class="social-icon" alt="LinkedIn" />
         Avi Panchal
       </a><br/>
+
       <!-- Gmail -->
       <a class="social-link" href="mailto:Panchalavi456@gmail.com">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="social-icon" alt="Email" />
@@ -143,13 +111,9 @@
     </div>
   </div>
 
-  <!-- Music Player (hidden) -->
-  <audio id="bg-music" autoplay loop>
+  <!-- Background music (optional) -->
+  <audio autoplay loop hidden>
     <source src="https://dl.sndup.net/8pjb/Saiyaara%20-%20Ek%20Tha%20Tiger.mp3" type="audio/mp3" />
-  </audio>
-
-  <audio id="thunder-sound" autoplay loop>
-    <source src="https://dl.sndup.net/dpx4/thunder.mp3" type="audio/mp3" />
   </audio>
 </body>
 </html>
