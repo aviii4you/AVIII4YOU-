@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #2c3e50, #3498db);
+      background: #1c1c1c;
       color: white;
       text-align: center;
       transition: background 1s ease;
@@ -64,20 +64,6 @@
       height: 20px;
     }
 
-    .music-controls {
-      margin-top: 25px;
-    }
-
-    .music-btn {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #fff;
-      color: #2c3e50;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-    }
-
     .rain, .lightning {
       pointer-events: none;
       position: fixed;
@@ -92,13 +78,11 @@
       background-image: url('https://i.ibb.co/jVncrG4/rain-effect.gif');
       background-size: cover;
       opacity: 0.3;
-      display: none;
     }
 
     .lightning {
       background: rgba(255, 255, 255, 0.9);
       animation: flash 3s infinite;
-      display: none;
     }
 
     @keyframes flash {
@@ -126,10 +110,9 @@
   </style>
 </head>
 <body>
-
   <!-- Rain & Lightning Layers -->
-  <div class="rain" id="rain-effect"></div>
-  <div class="lightning" id="lightning-effect"></div>
+  <div class="rain"></div>
+  <div class="lightning"></div>
 
   <div class="content">
     <img src="profile.jpg" class="profile" alt="Profile" />
@@ -158,47 +141,15 @@
         Panchalavi456@gmail.com
       </a>
     </div>
-
-    <!-- Music Player -->
-    <div class="music-controls">
-      <audio id="bg-music" loop>
-        <source src="https://dl.sndup.net/8pjb/Saiyaara%20-%20Ek%20Tha%20Tiger.mp3" type="audio/mp3" />
-      </audio>
-
-      <!-- Thunder Sound -->
-      <audio id="thunder-sound" loop>
-        <source src="https://dl.sndup.net/dpx4/thunder.mp3" type="audio/mp3" />
-      </audio>
-
-      <button class="music-btn" onclick="toggleMusic()">🎵 Play / Pause Music</button>
-    </div>
   </div>
 
-  <!-- Script -->
-  <script>
-    const music = document.getElementById('bg-music');
-    const thunder = document.getElementById('thunder-sound');
-    const rain = document.getElementById('rain-effect');
-    const lightning = document.getElementById('lightning-effect');
-    let isPlaying = false;
+  <!-- Music Player (hidden) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://dl.sndup.net/8pjb/Saiyaara%20-%20Ek%20Tha%20Tiger.mp3" type="audio/mp3" />
+  </audio>
 
-    function toggleMusic() {
-      if (isPlaying) {
-        music.pause();
-        thunder.pause();
-        rain.style.display = "none";
-        lightning.style.display = "none";
-        document.body.style.background = "linear-gradient(135deg, #2c3e50, #3498db)";
-      } else {
-        music.play();
-        thunder.play();
-        rain.style.display = "block";
-        lightning.style.display = "block";
-        document.body.style.background = "#1c1c1c";
-      }
-      isPlaying = !isPlaying;
-    }
-  </script>
-
+  <audio id="thunder-sound" autoplay loop>
+    <source src="https://dl.sndup.net/dpx4/thunder.mp3" type="audio/mp3" />
+  </audio>
 </body>
 </html>
