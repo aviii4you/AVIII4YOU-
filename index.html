@@ -23,4 +23,64 @@
       padding: 30px;
     }
 
-    .card
+    .card {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #555;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Welcome to Explore</h1>
+    <p>Thanks for verifying! This is the second page of your web app. You can add more features, images, links, or whatever you like here.</p>
+    <a href="index.html" class="button">← Back to Home</a>
+    <div class="footer">
+      &copy; 2025 AVIII4YOU. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
