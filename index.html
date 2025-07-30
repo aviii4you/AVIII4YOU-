@@ -76,17 +76,40 @@
     .contact {
       margin-top: 35px;
       font-size: 1rem;
-      line-height: 2;
+      line-height: 2.2;
     }
 
-    a {
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      text-decoration: none;
       color: #fff;
-      text-decoration: underline;
       transition: color 0.3s ease;
     }
 
-    a:hover {
+    .social-link:hover {
       color: #ffeb3b;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .button {
+        width: 80%;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -99,9 +122,18 @@
   <button class="button" onclick="alert('Thanks for visiting!')">Say Hi 👋</button>
 
   <div class="contact">
-    📸 Instagram: <a href="https://instagram.com/aviii4you" target="_blank">@aviii4you</a><br/>
-    ▶️ YouTube: <a href="https://youtube.com/@aviii4you?si=oFXNlPTlPZUDkbA5" target="_blank">@aviii4you</a>
-    📧 Email: <a href="mailto:Panchalavi456@gmail.com">Panchalavi456@gmail.com</a><br/>
+    <a class="social-link" href="https://instagram.com/aviii4you" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="social-icon" alt="Instagram" />
+      @aviii4you
+    </a><br/>
+    <a class="social-link" href="https://youtube.com/@aviii4you?si=oFXNlPTlPZUDkbA5" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="social-icon" alt="YouTube" />
+      @aviii4you
+    </a><br/>
+    <a class="social-link" href="mailto:Panchalavi456@gmail.com">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="social-icon" alt="Email" />
+      Panchalavi456@gmail.com
+    </a>
   </div>
 </body>
 </html>
