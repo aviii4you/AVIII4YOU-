@@ -1,70 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AVIII4YOU</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<a href="explore.html" class="button" id="exploreBtn" style="display: none;">Explore More</a>
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+<div style="margin-top: 20px;">
+  <input type="checkbox" id="verify" onclick="toggleButton()" />
+  <label for="verify">I am not a robot 🤖</label>
+</div>
 
-    .container {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 40px;
-      text-align: center;
-      color: #fff;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    .button {
-      padding: 12px 30px;
-      background-color: #fff;
-      color: #333;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: 0.3s;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background-color: #333;
-      color: #fff;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>AVIII4YOU</h1>
-    <p>Welcome to a stylish, modern, and mobile-friendly web app.</p>
-    <a href="<a href="explore.html" class="button">Explore More</a>
-  </div>
-</body>
-</html>
+<script>
+  function toggleButton() {
+    const checkbox = document.getElementById("verify");
+    const button = document.getElementById("exploreBtn");
+    button.style.display = checkbox.checked ? "inline-block" : "none";
+  }
+</script>
