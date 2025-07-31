@@ -64,6 +64,78 @@
     @media (max-width: 480px) {
       .profile {
         width: 100px;
+        height: 100px;<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AVIII4YOU WebApp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 600px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+
+    .contact {
+      font-size: 0.95rem;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .social-link:hover {
+      transform: scale(1.05);
+      color: #ffd700;
+    }
+
+    .social-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 480px) {
+      .profile {
+        width: 100px;
         height: 100px;
       }
 
@@ -93,7 +165,7 @@
 
       <!-- YouTube -->
       <a class="social-link" href="https://youtube.com/@aviii4you" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_square_(2017).svg" class="social-icon" alt="YouTube" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="social-icon" alt="YouTube" />
         @aviii4you
       </a><br/>
 
@@ -111,10 +183,10 @@
     </div>
   </div>
 
-  <!-- Background music (optional) -->
+  <!-- Background music -->
   <audio autoplay loop hidden>
     <source src="https://dl.sndup.net/8pjb/Saiyaara%20-%20Ek%20Tha%20Tiger.mp3" type="audio/mp3" />
   </audio>
+
 </body>
 </html>
-
