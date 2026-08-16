@@ -17,7 +17,7 @@
     }
 
     .content {
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
       padding: 30px 20px;
     }
@@ -32,20 +32,8 @@
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     }
 
-    h1 {
-      font-size: 2rem;
-      margin: 10px 0;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 25px;
-    }
-
-    .contact, .education {
-      font-size: 0.95rem;
-      margin-top: 20px;
-    }
+    h1 { font-size: 2rem; margin: 10px 0; }
+    h2 { margin-top: 30px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; font-size: 1.3rem; color: #ffd700; }
 
     .social-link {
       display: inline-flex;
@@ -57,30 +45,54 @@
       transition: transform 0.2s ease, color 0.2s ease;
     }
 
-    .social-link:hover {
-      transform: scale(1.05);
+    .social-link:hover { transform: scale(1.05); color: #ffd700; }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .skill-tag {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 6px 14px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+    }
+
+    .resume-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    .resume-box h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
       color: #ffd700;
     }
 
-    .social-icon {
-      width: 24px;
-      height: 24px;
-      border-radius: 5px;
+    .resume-box p, .resume-box li {
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
+    .resume-box ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+
+    .social-icon { width: 24px; height: 24px; border-radius: 5px; }
+
     @media (max-width: 480px) {
-      .profile {
-        width: 100px;
-        height: 100px;
-      }
-
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      p {
-        font-size: 0.95rem;
-      }
+      .profile { width: 100px; height: 100px; }
+      h1 { font-size: 1.6rem; }
     }
   </style>
 </head>
@@ -91,22 +103,44 @@
     <h1>AVIII4YOU</h1>
     <p>Welcome to my page! Stay connected 👇</p>
 
+    <!-- Editing Software / Skills Section -->
+    <div class="skills">
+      <h2>🛠 Editing Software & Skills</h2>
+      <div class="skills-list">
+        <span class="skill-tag">Adobe Premiere Pro</span>
+        <span class="skill-tag">Adobe After Effects</span>
+        <span class="skill-tag">Cutting & Trimming</span>
+        <span class="skill-tag">Color Correction</span>
+        <span class="skill-tag">Motion Graphics</span>
+      </div>
+    </div>
+
+    <!-- Resume Section (Integrated from PDF) -->
+    <div class="resume-box">
+      <h3>📄 Profile Summary</h3>
+      <p>B.Tech Computer Science Engineering student (1st year) with a strong interest in video editing. Proficient in Adobe Premiere Pro and After Effects, with hands-on practice producing both long-form YouTube-style videos and short-form content for Instagram Reels/Shorts[span_0](start_span)[span_0](end_span).</p>
+
+      <h3>🚀 Projects & Practice Work</h3>
+      <ul>
+        <li>Edited multiple practice YouTube-style videos, focusing on smooth cuts, background music syncing, and pacing[span_1](start_span)[span_1](end_span).</li>
+        <li>Created short-form Instagram Reels/Shorts using trending formats, quick transitions, and text overlays[span_2](start_span)[span_2](end_span).</li>
+        <li>Practiced color correction and basic motion graphics in After Effects to enhance overall video quality[span_3](start_span)[span_3](end_span).</li>
+      </ul>
+
+      <h3>💡 Currently Learning</h3>
+      <p>Advanced techniques in Adobe Premiere Pro & After Effects — including motion graphics, sound design, and color grading — through consistent, self-driven practice[span_4](start_span)[span_4](end_span).</p>
+    </div>
+
     <div class="contact">
       <h2>🔗 Social Media Links</h2> 
-
-      <!-- Instagram -->
       <a class="social-link" href="https://instagram.com/aviii4you" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="social-icon" alt="Instagram" />
         @aviii4you
       </a><br/>
-
-      <!-- YouTube -->
       <a class="social-link" href="https://youtube.com/@aviii4you" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="social-icon" alt="YouTube" />
         @aviii4you
       </a><br/>
-
-      <!-- LinkedIn -->
       <a class="social-link" href="https://www.linkedin.com/in/panchalavi" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" class="social-icon" alt="LinkedIn" />
         Avi Panchal
@@ -116,20 +150,18 @@
     <div class="education">
       <h2>🎓 Education</h2>
       <p>Acropolis Institute of Technology and Research</p>
-      <p>Bachelor of Technology (B.Tech), Computer Science & Engineering</p>
-      <p>Year: 2025 - 2029</p>
+      <p>Bachelor of Technology (B.Tech) — Computer Science Engineering (1st Year)[span_5](start_span)[span_5](end_span)</p>
     </div>
 
-    <!-- Gmail moved below Education -->
-  <div class="contact">
-  <div style="font-size: 1.2rem; font-weight: 600; color: #ffd700; margin-bottom: 10px;">
-    📧 Contact Us
-  </div>
-  <a class="social-link" href="mailto:Panchalavi456@gmail.com">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="social-icon" alt="Email" />
-    Panchalavi456@gmail.com
-  </a>
-</div>
+    <div class="contact">
+      <div style="font-size: 1.2rem; font-weight: 600; color: #ffd700; margin-bottom: 10px; margin-top: 30px;">
+        📧 Contact Us
+      </div>
+      <a class="social-link" href="mailto:Panchalavi456@gmail.com">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" class="social-icon" alt="Email" />
+        Panchalavi456@gmail.com
+      </a>
+    </div>
 
   </div>
 </body>
